@@ -4,7 +4,7 @@
       <div class="title">css 样式题</div>
       <div class="list wh100">
         <div :class="['item',{'mt-10px':ix != 0}]" v-for="(i,ix) in dataConfig" :key="ix">
-          <div class="item-i text-align-left">{{ ix + 1 }}.{{ i.title }}
+          <div class="item-i text-align-left">{{ ix + 1 }}.{{ i.title }}（{{i.type == 0 ? '单选' : i.type == 1 ? '多选' : '判断' }}}）
             <el-tooltip
                 effect="dark"
                 placement="top"
