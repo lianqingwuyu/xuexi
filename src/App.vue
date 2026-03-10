@@ -1,8 +1,18 @@
 <template>
-  <ScaleBox :width="1920" :height="1080" bgc="transparent" :delay="100" @scaleChange="scaleChange">
-<!--    <Backbtn></Backbtn>-->
+  <!--  <ScaleBox :width="1920" :height="1080" bgc="transparent" :delay="100" @scaleChange="scaleChange">-->
+  <!--    <Backbtn></Backbtn>-->
+  <!--    <router-view :key="key"></router-view>-->
+  <!--  </ScaleBox>-->
+  <PublicScaleContainer
+      :design-width="1920"
+      :design-height="1080"
+      :scale-limits="{ '4K': 1.8, '2K': 1.3, '1080P': 1.0, 'min': 0.7 }"
+      origin="center"
+      hd-optimize
+  >
     <router-view :key="key"></router-view>
-  </ScaleBox>
+  </PublicScaleContainer>
+  <!--  <router-view :key="key"></router-view>-->
 </template>
 <script setup>
 import ScaleBox from 'vue3-scale-box'
@@ -68,14 +78,17 @@ onMounted(() => {
 :root {
   --box-scale: 1;
 }
+
 .flex-j-a-c {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-*{
+
+* {
   box-sizing: border-box;
 }
+
 .flex {
   display: flex;
 }
@@ -95,6 +108,7 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
 }
+
 .wh100 {
   width: 100%;
   height: 100%;

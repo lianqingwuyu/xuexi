@@ -24,8 +24,9 @@ declare module 'vue' {
     ElTable: typeof import('element-plus/es')['ElTable']
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
-    PublicTable: typeof import('./../../src/components/publicTable/index.vue')['default']
-    PublicTabs: typeof import('./../../src/components/publicTabs/index.vue')['default']
+    PublicScaleContainer: typeof import('./../../src/components/public/scaleContainer/index.vue')['default']
+    PublicTable: typeof import('./../../src/components/public/table/index.vue')['default']
+    PublicTabs: typeof import('./../../src/components/public/tabs/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

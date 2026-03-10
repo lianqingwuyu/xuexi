@@ -174,7 +174,7 @@ onUnmounted(() => {
 </script>
 <style scoped lang="scss">
 .flex-between {
-  padding: 0 60px;
+  padding: 0 30px;
 
   .content {
     border: 1px solid red;
